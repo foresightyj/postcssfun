@@ -1,0 +1,26 @@
+{
+  "name": "postcssfun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts": "tsc -w",
+    "start": "node build/lintCss.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.54",
+    "@types/stylelint": "^7.10.0",
+    "eslint-plugin-compat": "^2.0.1",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "postcss-scss": "^1.0.2",
+    "stylelint": "^8.3.1",
+    "stylelint-config-recommended": "^2.0.0",
+    "stylelint-config-standard": "^18.0.0"
+  }
+}
