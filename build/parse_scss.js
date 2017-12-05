@@ -3,8 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const postcss = require("postcss");
 const fs = require("fs");
 const syntax = require('postcss-scss');
+const cssstats = require('postcss-cssstats');
 fs.readFile('src/styles/site.scss', (err, scss) => {
-    postcss().process(scss, { syntax: syntax }).then(function (result) {
+    postcss().use(cssstats()).process(scss, { syntax: syntax }).then(function (result) {
         const nodes = result.root.nodes;
         for (const node of nodes) {
             if (node.type === "decl") {
